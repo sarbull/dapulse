@@ -1,7 +1,13 @@
 const MergeJsonWebpackPlugin = require('merge-jsons-webpack-plugin');
+const webpack = require('webpack');
+
+const API_URL = process.env.API_URL || 'http://localhost/';
 
 module.exports = {
   plugins: [
+    new webpack.DefinePlugin({
+      'process.env.API_URL': JSON.stringify(API_URL)
+    }),
     new MergeJsonWebpackPlugin({
       output: {
         groupBy: [

@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "scripts": {
     "ng": "ng",
-    "prestart": "npm run test",
+    "prestart": "npm run lint",
     "start": "ng serve --open",
     "prebuild": "npm run test",
     "build": "ng build --aot --prod --vendor-chunk true",
