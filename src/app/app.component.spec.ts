@@ -22,10 +22,10 @@ describe('AppComponent', () => {
     expect(app.title).toEqual('dapulse');
   });
 
-  it('should render title in a h1 tag', () => {
+  it('should render text in a p tag', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.debugElement.nativeElement;
-    expect(compiled.querySelector('h1').textContent).toContain('Welcome to dapulse!');
+    expect(compiled.querySelector('p').textContent).toContain('custom-webpack.config.js');
   });
 });
